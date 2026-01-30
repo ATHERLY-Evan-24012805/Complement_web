@@ -1,0 +1,21 @@
+div{
+    border-width:2px;
+    border : solid;
+    width: fit-content;
+    border-color: #ffffff00;
+}
+.borderBlue{
+    border-color:blue;
+}
+.borderGreen{
+    border-color:green
+}
+.borderOrange{
+    border-color:orange
+}
+.borderRed{
+    border-color:red
+}
+.hidden {
+  display: none;
+}

@@ -7,7 +7,11 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <section id="premiere section">
+    <section id = "buttons">
+        <button class="tab" id = "value">valeurs</button>
+        <button class="tab" id = "history">historique</button>
+    </section>
+    <section id="values" aria-disabled="false">
         <h1 id="blocDeVal">Bloc qui va contenir la valeur </h1>
         <div id="val1" aria-live="assertive" role="alert">
             <span class = "temp"></span>
@@ -15,8 +19,12 @@
             <span class = "hidden">ca marche ?</span>
         </div>
     </section>
+    <section id ="histories" aria-selected="false" hidden>
+        <h1>historique</h1>
+        <span style="text-wrap-mode:wrap"></span>
+    </section>
 
-    <script src = "random.js">
+    <script type ="module" src = "module/Main.js">
     </script>
-</body>
+    </body>
 </html>

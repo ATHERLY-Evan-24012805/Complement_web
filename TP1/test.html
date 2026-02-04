@@ -1,0 +1,27 @@
+<form>
+  <input type="button" value="Démarrer la machine" />
+    <input type="buttonbutton" value="boujour" />
+</form>
+<p>La machine est arrêtée.</p>
+
+<script>
+    const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
+
+    const buttonbutton = document.querySelector("input");
+
+
+button.addEventListener("click", updateButton);
+buttonbutton.addEventListener("click", updateButton);
+
+
+function updateButton() {
+  if (button.value === "Démarrer la machine") {
+    button.value = "Arrêter la machine";
+    paragraph.textContent = "La machine est démarrée !";
+  } else {
+    button.value = "Démarrer la machine";
+    paragraph.textContent = "La machine est arrêtée.";
+  }
+}
+</script>

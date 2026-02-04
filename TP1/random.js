@@ -1,3 +1,5 @@
+A_hist=[]
+
 function createTab(){
     let A_tabTemp=[]
     for (let I_index = 0; I_index<20;I_index++){
@@ -18,14 +20,21 @@ function general(){
     /*O_Zone1.innerHTML = A_tabTemp[0]
     var id = setInterval(replaceNumber,2000,O_Zone1,A_tabTemp[1])*/
     var interval= setInterval(replaceNumber,2000,A_tabTemp)
+    var intervalHistoric = setInterval(refreshHist, 2000)
+}
+function refreshHist(){
+    const O_hist = document.getElementById("histories");
+    console.log(O_hist.childNodes[4]);
+    O_hist.childNodes[4].textContent = A_hist;
 }
 function replaceNumber(A_tabTemp){
     const O_Zone1 = document.getElementById("val1");
     let val = A_tabTemp[I_indice]
+    A_hist.push(val);
+    console.log(A_hist);
     O_Zone1.firstChild.textContent = val
     val = parseInt(val)
     if (val>=-10 && val<=0){
-        console.log(O_Zone1.childNodes);
         O_Zone1.className = "borderBlue";
         O_Zone1.childNodes[1].textContent = " Brrrrrrr, un peu froid ce matin, mets ta cagoule !";
         //console.log(O_Zone1.childNodes[1]);        
